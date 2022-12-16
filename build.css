@@ -381,6 +381,7 @@ body footer {
 body footer section {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 body footer section div {
   height: 250px;
@@ -430,6 +431,7 @@ body #pageproduit div #imagesproduct #smallimg div {
 }
 body #pageproduit div #imagesproduct #smallimg div img {
   width: 100%;
+  cursor: pointer;
 }
 body #pageproduit div #imagesproduct #bigimg {
   width: 80%;
@@ -646,6 +648,17 @@ body #mbc div div div:nth-of-type(4) {
   body main #slider div div #texteslider {
     padding: 30px;
   }
+  body main #slider div div #texteslider #titreslider {
+    margin-bottom: 0;
+  }
+  body main #recherche {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  body main #recherche #type {
+    width: 70%;
+  }
   body main #nouveautes #next2 {
     left: 725px;
   }
@@ -686,6 +699,14 @@ body #mbc div div div:nth-of-type(4) {
   body main #mbc div {
     width: 100%;
   }
+  body main #mbc div span {
+    margin-left: 60px;
+  }
+  body main #mbc div div img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }
   body footer section div {
     height: auto;
   }
@@ -700,44 +721,71 @@ body #mbc div div div:nth-of-type(4) {
   body header section {
     height: 50vh;
   }
+  body main #slider div {
+    height: 30vh;
+  }
+  body main #slider div div #texteslider {
+    height: 30vh;
+  }
   body main #slider div div #texteslider #titreslider {
-    font-size: 20px;
+    font-size: 12px;
+    margin-bottom: 5px;
   }
   body main #slider div div #texteslider #commslider {
-    font-size: 15px;
+    font-size: 9px;
+    height: 20vh;
+    text-align: center;
+  }
+  body main #slider .slider {
+    height: 30vh;
   }
   body main #slider #next {
     left: 390px;
-    bottom: 60px;
+    font-size: small;
   }
   body main #slider #previous {
-    bottom: 60px;
+    font-size: small;
   }
   body main #recherche div p {
     margin-left: 40px;
+    font-size: 25px;
   }
   body main #recherche div #hr {
     margin-left: 40px;
+    width: 100px;
+  }
+  body main #recherche #type div div {
+    width: 100px;
+    font-size: 15px;
   }
   body main #nouveautes #next2 {
-    left: 385px;
-    top: 670px;
+    display: none;
   }
   body main #nouveautes #previous2 {
-    top: 670px;
+    display: none;
   }
   body main #vendre {
+    flex-direction: column;
     margin-top: 200vh;
-    height: 55vh;
+    height: 130vh;
+  }
+  body main #vendre div {
+    width: 100%;
   }
   body main #vendre div p {
-    width: 200px;
-    font-size: 13px;
+    width: 280px;
+    font-size: 15px;
     height: 250px;
   }
   body main #vendre div button {
     width: 170px;
     font-size: 10px;
+  }
+  body main #avis #cardavis {
+    margin-bottom: 10vh;
+  }
+  body main #avis #cardavis div {
+    margin-top: 4vh;
   }
   body main #avis div p {
     margin-left: 45px;
@@ -764,7 +812,8 @@ body #mbc div div div:nth-of-type(4) {
   }
   body main #pageproduit div #imagesproduct #smallimg div img {
     width: 100%;
-    height: auto;
+    height: 100px;
+    margin-bottom: 40px;
   }
   body main #pageproduit div #imagesproduct #bigimg img {
     width: 100%;
@@ -778,9 +827,25 @@ body #mbc div div div:nth-of-type(4) {
   }
   body main #similaires #cards {
     height: 180vh;
+    margin-top: 4vh;
+  }
+  body main #similaires #cards .card {
+    margin-top: 0;
+  }
+  body main #similaires #cards .card div {
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+  }
+  body main #similaires #cards .card div img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
   }
   body main #mbc {
+    margin-bottom: 0;
     height: 130vh;
+    margin-top: 0;
   }
   body main #mbc div {
     margin-top: 110px;
@@ -790,29 +855,39 @@ body #mbc div div div:nth-of-type(4) {
   }
   body main #mbc div div div:nth-of-type(1) {
     border-left: none;
-    border-bottom: 3px solid black;
     text-align: center;
   }
   body main #mbc div div div:nth-of-type(2) {
     border-left: none;
-    border-bottom: 3px solid black;
     text-align: center;
   }
   body main #mbc div div div:nth-of-type(3) {
     border-left: none;
-    border-bottom: 3px solid black;
     text-align: center;
   }
   body main #mbc div div div:nth-of-type(4) {
     border-left: none;
-    border-bottom: 3px solid black;
     text-align: center;
   }
+  body footer {
+    height: 100vh;
+  }
+  body footer section {
+    justify-content: start;
+  }
+  body footer section div {
+    padding-left: 40px;
+    width: 100%;
+  }
   body footer section div h4 {
-    font-size: 15px;
+    font-size: 25px;
+    font-weight: bold;
   }
   body footer section div ul li {
-    font-size: 10px;
+    font-size: 15px;
+  }
+  body footer section div ul li img {
+    width: 15px;
   }
 }
 

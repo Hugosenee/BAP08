@@ -395,6 +395,7 @@ body{
         section{
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             div{
                 height: 250px;
                 width: 250px;
@@ -445,6 +446,7 @@ body{
                         height: 20%;
                         img{
                             width: 100%;
+                            cursor: pointer;
                         }
                     }
                 }
@@ -681,8 +683,19 @@ body{
                     div{
                         #texteslider{
                             padding: 30px;
+                            #titreslider{
+                                margin-bottom: 0;
+                            }
                         }
                     }
+                }
+            }
+            #recherche{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                #type{
+                    width: 70%;
                 }
             }
             #nouveautes{
@@ -733,6 +746,16 @@ body{
             #mbc{
                 div{
                     width: 100%;
+                    span{
+                        margin-left: 60px;
+                    }
+                    div{
+                        img{
+                            width: 50px;
+                            height: 50px;
+                            margin-right: 5px;
+                        }
+                    }
                 }
             }
         }
@@ -764,51 +787,70 @@ body{
         main{
             #slider{
                 div{
+                    height: 30vh;
                     div{
                         #texteslider{
+                            height: 30vh;
                             #titreslider{
-                                font-size: 20px;
+                                font-size: 12px;
+                                margin-bottom: 5px;
                             }
                             #commslider{
-                                font-size: 15px;
+                                font-size: 9px;
+                                height: 20vh;
+                                text-align: center;
                             }
                         }
                     }
                 }
+                .slider{
+                    height: 30vh;
+                }
                 #next{
                     left: 390px;
-                    bottom: 60px;
+                    font-size: small;
                 }
                 #previous{
-                    bottom: 60px;
+                    font-size: small;
                 }
             }
             #recherche{
                 div{
                     p{
                         margin-left: 40px;
+                        font-size: 25px;
                     }
                     #hr{
                         margin-left: 40px;
+                        width: 100px;
+                    }
+                }
+                #type{
+                    div{
+                        div{
+                            width: 100px;
+                            font-size: 15px;
+                        }
                     }
                 }
             }
             #nouveautes{
                 #next2{
-                    left: 385px;
-                    top: 670px;
+                    display: none;
                 }
                 #previous2{
-                    top: 670px;
+                    display: none;
                 }
             }
             #vendre{
+                flex-direction: column;
                 margin-top: 200vh;
-                height: 55vh;
+                height: 130vh;
                 div{
+                    width: 100%;
                     p{
-                        width: 200px;
-                        font-size: 13px;
+                        width: 280px;
+                        font-size: 15px;
                         height: 250px;
                     }
                     button{
@@ -818,6 +860,12 @@ body{
                 }
             }
             #avis{
+                #cardavis{
+                    margin-bottom: 10vh;
+                    div{
+                        margin-top: 4vh;
+                    }
+                }
                 div{
                     p{
                         margin-left: 45px;
@@ -843,7 +891,8 @@ body{
                                 height: 70%;
                                 img{
                                     width: 100%;
-                                    height: auto;
+                                    height: 100px;
+                                    margin-bottom: 40px;
                                 }
                             }
                         }
@@ -867,32 +916,44 @@ body{
                 }
                 #cards{
                     height: 180vh;
+                    margin-top: 4vh;
+                    .card{
+                        margin-top: 0;
+                        div{
+                            margin-left: 150px;
+                            display: flex;
+                            align-items: center;
+                            img{
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
                 }
             }
             #mbc{
+                margin-bottom: 0;
                 height: 130vh;
+                margin-top: 0;
                 div{
                     margin-top: 110px;
                     div{
                         flex-direction: column;
                         div:nth-of-type(1){
                             border-left: none;
-                            border-bottom: 3px solid black;
                             text-align: center;
                         }
                         div:nth-of-type(2){
                             border-left: none;
-                            border-bottom: 3px solid black;
                             text-align: center;
                         }
                         div:nth-of-type(3){
                             border-left: none;
-                            border-bottom: 3px solid black;
                             text-align: center;
                         }
                         div:nth-of-type(4){
                             border-left: none;
-                            border-bottom: 3px solid black;
                             text-align: center;
                         }
                     }
@@ -900,14 +961,22 @@ body{
             }
         }
         footer{
+            height: 100vh;
             section{
+                justify-content: start;
                 div{
+                    padding-left: 40px;
+                    width: 100%;
                     h4{
-                        font-size: 15px;
+                        font-size: 25px;
+                        font-weight: bold;
                     }
                     ul{
                         li{
-                            font-size: 10px;
+                            font-size: 15px;
+                            img{
+                                width: 15px;
+                            }
                         }
                     }
                 }
