@@ -6,6 +6,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
+//css page index + header +footer
+
 body{
     .reveal{
         opacity: 0;
@@ -643,7 +645,7 @@ body{
     }
 }
 
-// responsive
+// responsive tablette
 
 @media screen and (max-width: 769px) {
     body{
@@ -776,6 +778,8 @@ body{
         }
     }
 }
+
+//responsive téléphone
 
 @media screen and (max-width: 426px) {
     body{

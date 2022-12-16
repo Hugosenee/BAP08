@@ -22,6 +22,7 @@ document.querySelectorAll('.reveal').forEach(function (reveal) {
 });
 
 
+//slider 1
 
 let slides = document.querySelectorAll('.slider');
 let btnnext = document.querySelector('#next')
@@ -54,6 +55,8 @@ if (btnprevious.addEventListener('click', function() {
 
 
 }));
+
+//slider cards
 
 let cards = document.querySelectorAll('.cards');
 let btnnext2 = document.querySelector('#next2')

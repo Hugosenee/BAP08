@@ -1,3 +1,5 @@
+//apparaitre images au click
+
 let img = document.querySelectorAll('.img')
 let img1 = document.querySelector('#img1')
 let img2 = document.querySelector('#img2')
