@@ -1,0 +1,819 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+body .reveal {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+body .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s;
+}
+body header .reveal {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+body header .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.3s;
+}
+body header section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 20vh;
+}
+body header section #headerlogo img {
+  width: 170px;
+  margin-left: 100px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+body header section #ulheader ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 70px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+body header section #ulheader ul li {
+  position: relative;
+  cursor: pointer;
+}
+body header section #ulheader ul li img {
+  width: 30px;
+}
+body header section #ulheader ul li:after {
+  content: "";
+  position: absolute;
+  background-color: #74B773;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -1px;
+  transition: 0.3s;
+}
+body header section #ulheader ul li:hover:after {
+  width: 100%;
+}
+body main #slider {
+  display: flex;
+}
+body main #slider #next {
+  font-size: 40px;
+  position: absolute;
+  z-index: 1;
+  left: 1470px;
+  bottom: 250px;
+  color: white;
+}
+body main #slider #previous {
+  font-size: 40px;
+  position: absolute;
+  z-index: 1;
+  bottom: 250px;
+  color: white;
+}
+body main #slider .slider {
+  display: none;
+}
+body main #slider .active {
+  display: flex;
+}
+body main #slider div {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  background-color: #D4E1C1;
+}
+body main #slider div #imgslider {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+body main #slider div #imgslider img {
+  width: 80%;
+  height: 100%;
+}
+body main #slider div #imgslider2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+}
+body main #slider div #imgslider2 img {
+  width: 80%;
+  height: 100%;
+}
+body main #slider div div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #slider div div #texteslider {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+body main #slider div div #texteslider #titreslider {
+  font-weight: bolder;
+  font-size: 45px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+body main #slider div div #texteslider #commslider {
+  font-size: 22px;
+}
+body main #recherche {
+  margin-top: 15vh;
+}
+body main #recherche div p {
+  font-size: 35px;
+  font-weight: bolder;
+  color: #2D3734;
+  margin-left: 70px;
+}
+body main #recherche div #hr {
+  height: 7px;
+  width: 170px;
+  background-color: #4B6758;
+  border-radius: 25px;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+body main #recherche #type {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 120px;
+}
+body main #recherche #type div {
+  height: 150px;
+}
+body main #recherche #type div div {
+  height: 79px;
+  width: 136px;
+  background-color: #D4E1C1;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #recherche #type div div .iconrecherche {
+  font-size: 35px;
+  color: #6A8E4E;
+}
+body main #recherche #type div div:hover {
+  background-color: #4B6758;
+}
+body main #recherche #type div div:hover .iconrecherche {
+  color: white;
+}
+body main #recherche #type div p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  margin-top: 15px;
+}
+body main #nouveautes {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+body main #nouveautes div p {
+  font-size: 35px;
+  font-weight: bolder;
+  color: #2D3734;
+  margin-left: 70px;
+}
+body main #nouveautes div #hr {
+  height: 7px;
+  width: 170px;
+  background-color: #4B6758;
+  border-radius: 25px;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+body main #nouveautes #next2 {
+  font-size: 40px;
+  position: absolute;
+  z-index: 1;
+  left: 1470px;
+  top: 300px;
+  color: #D4E1C1;
+}
+body main #nouveautes #previous2 {
+  font-size: 40px;
+  position: absolute;
+  z-index: 1;
+  top: 300px;
+  color: #D4E1C1;
+}
+body main #nouveautes .cards {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  display: none;
+}
+body main #nouveautes .cards .card {
+  margin-top: 10vh;
+  width: 250px;
+  height: 350px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body main #nouveautes .cards .card img {
+  width: 100%;
+  height: 50%;
+}
+body main #nouveautes .cards .card p {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+body main #nouveautes .cards .card span {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  color: #4B6758;
+  font-weight: bolder;
+}
+body main #nouveautes .cards .card button {
+  width: 75px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #D4E1C1;
+  border: none;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+body main #nouveautes .cards .card button a {
+  color: black;
+  text-decoration: none;
+}
+body main #nouveautes .cards .card div {
+  display: flex;
+  justify-content: end;
+  margin: 0;
+  background-color: #2D3734;
+  width: 50px;
+  height: 70px;
+  margin-left: 200px;
+  border-top-left-radius: 20px;
+}
+body main #nouveautes .cards .card div img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+body main #nouveautes .active {
+  display: flex;
+}
+body main #vendre {
+  width: 100%;
+  height: 80vh;
+  margin-top: 45vh;
+  background-color: #F5F5F5;
+  display: flex;
+}
+body main #vendre div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main #vendre div img {
+  width: 100%;
+  height: 100%;
+}
+body main #vendre div p {
+  width: 500px;
+  height: 300px;
+  font-size: larger;
+  text-align: left;
+}
+body main #vendre div button {
+  width: 220px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #2D3734;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+body main #avis {
+  margin-top: 10vh;
+}
+body main #avis div p {
+  font-size: 35px;
+  font-weight: bolder;
+  color: #2D3734;
+  margin-left: 70px;
+}
+body main #avis div #hr {
+  height: 7px;
+  width: 170px;
+  background-color: #4B6758;
+  border-radius: 25px;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+body main #avis #cardavis {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20vh;
+}
+body main #avis #cardavis div {
+  margin-top: 10vh;
+  width: 250px;
+  height: 350px;
+  background-color: #F5F5F5;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main #avis #cardavis div img {
+  width: 90px;
+  height: 120px;
+}
+body main #avis #cardavis div p {
+  font-size: 15px;
+  margin: 0;
+  height: 100px;
+  width: 200px;
+  margin-top: 30px;
+  text-align: center;
+  color: black;
+}
+body footer {
+  width: 100%;
+  height: 35vh;
+  background-color: #D4E1C1;
+}
+body footer section {
+  display: flex;
+  justify-content: space-around;
+}
+body footer section div {
+  height: 250px;
+  width: 250px;
+}
+body footer section div h4 {
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+body footer section div ul {
+  list-style: none;
+}
+body footer section div ul li {
+  margin-top: 20px;
+}
+body footer section div ul li img {
+  width: 30px;
+  margin-left: 20px;
+}
+
+body #pageproduit {
+  display: flex;
+  justify-content: center;
+}
+body #pageproduit div {
+  width: 90%;
+  height: 70vh;
+  display: flex;
+}
+body #pageproduit div #imagesproduct {
+  width: 100%;
+  height: 100%;
+}
+body #pageproduit div #imagesproduct #smallimg {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+body #pageproduit div #imagesproduct #smallimg div {
+  width: 70%;
+  height: 20%;
+}
+body #pageproduit div #imagesproduct #smallimg div img {
+  width: 100%;
+}
+body #pageproduit div #imagesproduct #bigimg {
+  width: 80%;
+  height: 100%;
+}
+body #pageproduit div #imagesproduct #bigimg .img {
+  display: none;
+}
+body #pageproduit div #imagesproduct #bigimg .active {
+  display: block;
+}
+body #pageproduit div #descproduct {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid #2D3734;
+  justify-content: space-evenly;
+}
+body #pageproduit div #descproduct p:nth-child(1) {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-left: 30px;
+}
+body #pageproduit div #descproduct p:nth-child(2) {
+  font-size: large;
+  font-weight: bolder;
+  margin-left: 30px;
+}
+body #pageproduit div #descproduct p:nth-child(3) {
+  font-size: small;
+  margin-left: 30px;
+}
+body #pageproduit div #descproduct span {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #4B6758;
+  margin-left: 30px;
+}
+body #pageproduit div #descproduct button {
+  width: 150px;
+  height: 35px;
+  border-radius: 25px;
+  background-color: #2D3734;
+  color: white;
+  margin-left: 30px;
+}
+body #similaires {
+  margin-top: 10vh;
+}
+body #similaires div p {
+  font-size: 35px;
+  font-weight: bolder;
+  color: #2D3734;
+  margin-left: 250px;
+}
+body #similaires div #hr {
+  height: 7px;
+  width: 170px;
+  background-color: #4B6758;
+  border-radius: 25px;
+  margin-left: 250px;
+  margin-top: 10px;
+}
+body #similaires #cards {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+body #similaires #cards .card {
+  margin-top: 10vh;
+  width: 250px;
+  height: 350px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body #similaires #cards .card img {
+  width: 100%;
+  height: 50%;
+}
+body #similaires #cards .card p {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+body #similaires #cards .card span {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  color: #4B6758;
+  font-weight: bolder;
+}
+body #similaires #cards .card button {
+  width: 75px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #D4E1C1;
+  border: none;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+body #similaires #cards .card button a {
+  color: black;
+  text-decoration: none;
+}
+body #similaires #cards .card div {
+  display: flex;
+  justify-content: end;
+  margin: 0;
+  background-color: #2D3734;
+  width: 50px;
+  height: 70px;
+  margin-left: 200px;
+  border-top-left-radius: 20px;
+}
+body #similaires #cards .card div img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+body #mbc {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 50vh;
+  margin-bottom: 15vh;
+}
+body #mbc div {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body #mbc div p {
+  font-size: 25px;
+}
+body #mbc div p span {
+  font-weight: bolder;
+}
+body #mbc div div {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body #mbc div div img {
+  width: 70px;
+  height: 70px;
+}
+body #mbc div div p {
+  font-size: smaller;
+  width: 150px;
+}
+body #mbc div div div:nth-of-type(1) {
+  width: 25%;
+  height: 100%;
+  margin-top: 75px;
+}
+body #mbc div div div:nth-of-type(2) {
+  width: 25%;
+  height: 100%;
+  margin-top: 75px;
+  border-left: 3px solid #2D3734;
+}
+body #mbc div div div:nth-of-type(3) {
+  width: 25%;
+  height: 100%;
+  margin-top: 75px;
+  border-left: 3px solid #2D3734;
+}
+body #mbc div div div:nth-of-type(4) {
+  width: 25%;
+  height: 100%;
+  margin-top: 75px;
+  border-left: 3px solid #2D3734;
+}
+
+@media screen and (max-width: 769px) {
+  body header section {
+    height: 30vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  body header section #headerlogo img {
+    margin: 0;
+  }
+  body header section #ulheader ul {
+    margin: 0;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  body header section #ulheader ul li {
+    display: flex;
+    align-items: center;
+  }
+  body main #slider #next {
+    left: 735px;
+    bottom: 170px;
+  }
+  body main #slider #previous {
+    bottom: 170px;
+  }
+  body main #slider div div #texteslider {
+    padding: 30px;
+  }
+  body main #nouveautes #next2 {
+    left: 725px;
+  }
+  body main #vendre div p {
+    width: 350px;
+    font-size: large;
+  }
+  body main #pageproduit {
+    display: block;
+    height: 130vh;
+  }
+  body main #pageproduit > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main #pageproduit > div #descproduct {
+    margin-top: 30px;
+    border-left: none;
+    border-top: 3px solid #2D3734;
+    text-align: center;
+    align-items: center;
+  }
+  body main #pageproduit > div #descproduct p {
+    margin-top: 20px;
+  }
+  body main #pageproduit > div #descproduct span {
+    margin-top: 20px;
+  }
+  body main #pageproduit > div #descproduct button {
+    margin-top: 20px;
+  }
+  body main #similaires #cards {
+    gap: 30px;
+  }
+  body main #similaires #cards .card {
+    width: 200px;
+  }
+  body main #mbc div {
+    width: 100%;
+  }
+  body footer section div {
+    height: auto;
+  }
+  body footer section div h4 {
+    font-size: 20px;
+  }
+  body footer section div ul li {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 426px) {
+  body header section {
+    height: 50vh;
+  }
+  body main #slider div div #texteslider #titreslider {
+    font-size: 20px;
+  }
+  body main #slider div div #texteslider #commslider {
+    font-size: 15px;
+  }
+  body main #slider #next {
+    left: 390px;
+    bottom: 60px;
+  }
+  body main #slider #previous {
+    bottom: 60px;
+  }
+  body main #recherche div p {
+    margin-left: 40px;
+  }
+  body main #recherche div #hr {
+    margin-left: 40px;
+  }
+  body main #nouveautes #next2 {
+    left: 385px;
+    top: 670px;
+  }
+  body main #nouveautes #previous2 {
+    top: 670px;
+  }
+  body main #vendre {
+    margin-top: 200vh;
+    height: 55vh;
+  }
+  body main #vendre div p {
+    width: 200px;
+    font-size: 13px;
+    height: 250px;
+  }
+  body main #vendre div button {
+    width: 170px;
+    font-size: 10px;
+  }
+  body main #avis div p {
+    margin-left: 45px;
+  }
+  body main #avis div #hr {
+    margin-left: 45px;
+  }
+  body main #pageproduit {
+    display: flex;
+    justify-content: center;
+  }
+  body main #pageproduit div #imagesproduct {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main #pageproduit div #imagesproduct #smallimg {
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  body main #pageproduit div #imagesproduct #smallimg div {
+    height: 70%;
+  }
+  body main #pageproduit div #imagesproduct #smallimg div img {
+    width: 100%;
+    height: auto;
+  }
+  body main #pageproduit div #imagesproduct #bigimg img {
+    width: 100%;
+    height: 100%;
+  }
+  body main #similaires div p {
+    margin-left: 70px;
+  }
+  body main #similaires div #hr {
+    margin-left: 70px;
+  }
+  body main #similaires #cards {
+    height: 180vh;
+  }
+  body main #mbc {
+    height: 130vh;
+  }
+  body main #mbc div {
+    margin-top: 110px;
+  }
+  body main #mbc div div {
+    flex-direction: column;
+  }
+  body main #mbc div div div:nth-of-type(1) {
+    border-left: none;
+    border-bottom: 3px solid black;
+    text-align: center;
+  }
+  body main #mbc div div div:nth-of-type(2) {
+    border-left: none;
+    border-bottom: 3px solid black;
+    text-align: center;
+  }
+  body main #mbc div div div:nth-of-type(3) {
+    border-left: none;
+    border-bottom: 3px solid black;
+    text-align: center;
+  }
+  body main #mbc div div div:nth-of-type(4) {
+    border-left: none;
+    border-bottom: 3px solid black;
+    text-align: center;
+  }
+  body footer section div h4 {
+    font-size: 15px;
+  }
+  body footer section div ul li {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=build.css.map */
